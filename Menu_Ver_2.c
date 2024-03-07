@@ -5,7 +5,6 @@
  
 using namespace std;
  
-//Hàm vẽ khung menu và sự kiện hover menu
 void menu(int &x, int &y)
 {
     settextstyle(4,0,5);    setcolor(14); //Đặt kiểu chữ và màu vẽ
@@ -27,7 +26,6 @@ void menu(int &x, int &y)
     outtextxy(290,320," ABOUT          ");
     outtextxy(310,350," EXIT           ");
     }
-//Đang hover phần tử SCORE -> tương tự với các phần tử phía dưới
     else if((y>=260 && y<=290) && (x>=255 && x<=450))
     {
     settextstyle(1,0,2);    setcolor(15);
@@ -84,10 +82,8 @@ void menu(int &x, int &y)
 }
  
  
-Hàm xử lý các sự kiện click vào menu thành phần
 void clickmouse(int &thoat, int x, int y) 
 {
-//Nếu click vào chuột trái(click chứ kg phải click đúp)
     if(ismouseclick(WM_LBUTTONDBLCLK) && (y>230 && y<380) && (x>255 && x<450))
     {
         int x1, y1;
@@ -96,7 +92,6 @@ void clickmouse(int &thoat, int x, int y)
         outtextxy(390,670,"-----by Tanchan679----");
         getmouseclick((WM_LBUTTONDBLCLK), x1, y1);  //Lấy tọa độ x, y vị trí click chuột
  
-//Click vào NEW GAME
         if((y1>=230 && y1<=260) && (x1>=255 && x1<=450))
         {
             setcolor(15); outtext("Ban vua click "); setcolor(12);outtext("NEW GAME"); setcolor(15); outtext("  - by tanchan679");
